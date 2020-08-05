@@ -5,16 +5,12 @@ if (isNaN(primoNumero) || isNaN(secondoNumero)) {
   alert("Sono ammessi solo valori numerici.");
 
 } else if (primoNumero > secondoNumero) {
-  var numeroStampato = primoNumero;
-  var messaggio = "Il numero maggiore è il primo: ";
+  document.getElementById("numero").innerHTML = "Il numero maggiore è il primo: " + primoNumero;
 
 } else if (secondoNumero > primoNumero) {
-  var numeroStampato = secondoNumero;
-  var messaggio = "Il numero maggiore è il secondo: ";
-  
-} else {
-  var numeroStampato = primoNumero;
-  var messaggio = "I due numeri sono uguali: ";
-}
+  document.getElementById("numero").innerHTML = "Il numero maggiore è il secondo: " + secondoNumero;
 
-document.getElementById("numero").innerHTML = messaggio + numeroStampato;
+} else {
+  document.getElementById("numero").innerHTML = "I due numeri sono uguali";
+
+}
